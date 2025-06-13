@@ -1,0 +1,210 @@
+Increase the version number in your setup.py:
+
+    version='0.1.2'  # or higher, must be unique and not used before
+
+Delete old build files to avoid confusion:
+
+    rm -rf dist/ build/ *.egg-info
+
+Rebuild your package:
+
+    python3 setup.py sdist bdist_wheel
+
+Upload again:
+
+    twine upload dist/*
+
+
+✅ How to Add MkDocs Docs to Your GitHub Repo
+We'll assume your repo is already cloned locally (or you can do it now):
+
+
+git clone https://github.com/cosmo-the-deer/badcode_utilities.git
+cd badcode_utilities
+🧱 Step 1: Create the Docs Folder
+From the root of your project:
+
+
+mkdocs new .
+This will create:
+
+pgsql
+Copy
+Edit
+badcode_utilities/
+├── docs/
+│   └── index.md
+└── mkdocs.yml
+You can also create docs/functions.md and other files manually.
+
+✍️ Step 2: Add Markdown Docs
+Example file: docs/functions.md
+
+markdown
+Copy
+Edit
+# Function Documentation
+
+## `random_string(length: int) -> str`
+Generates a random string of the specified length using ASCII letters.
+
+## `encrypt_text(text: str, key: str) -> str`
+Encrypts the text using a simple XOR cipher with the provided key.
+Then update mkdocs.yml:
+
+yaml
+Copy
+Edit
+site_name: badcode_utilities
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Functions: functions.md
+📦 Step 3: Commit Docs to Your Repo
+bash
+Copy
+Edit
+git add docs mkdocs.yml
+git commit -m "Add MkDocs documentation"
+git push
+🚀 Step 4: Deploy to GitHub Pages
+From your project root:
+
+bash
+Copy
+Edit
+mkdocs gh-deploy
+This will:
+
+Build the static site
+
+Push to a gh-pages branch
+
+Automatically configure GitHub Pages
+
+Go to your repo on GitHub:
+
+Settings → Pages → Set Source to gh-pages branch (if it isn't already)
+
+Your site will be at:
+
+arduino
+Copy
+Edit
+https://cosmo-the-deer.github.io/badcode_utilities/
+⚠️ Note
+If you haven’t already, install the dependencies:
+
+bash
+Copy
+Edit
+pip install mkdocs mkdocs-material
+And make sure gh or GitHub CLI is authenticated (or push manually to GitHub if needed).
+
+Want me to generate an initial functions.md for your existing code automatically? Just say the word.
+
+
+
+
+
+
+
+
+
+You said:
+im on linux btew
+
+
+ChatGPT said:
+Perfect — since you're on Linux, everything works just as well (if not better). Here’s a Linux-optimized summary and a few clarifications:
+
+✅ Quick Linux Setup Summary
+1. 🧰 Install MkDocs and Material Theme
+If you use pip:
+
+bash
+Copy
+Edit
+pip install mkdocs mkdocs-material
+Or if you're using a virtual environment:
+
+bash
+Copy
+Edit
+python3 -m venv .venv
+source .venv/bin/activate
+pip install mkdocs mkdocs-material
+2. 📁 In Your Project Root
+Navigate to your cloned repo:
+
+bash
+Copy
+Edit
+cd ~/path/to/badcode_utilities
+Then initialize MkDocs:
+
+bash
+Copy
+Edit
+mkdocs new .
+Edit your files in the generated docs/ folder. Create functions.md, etc.
+
+3. 🧪 Test Docs Locally
+From the repo directory:
+
+bash
+Copy
+Edit
+mkdocs serve
+Then open your browser to:
+
+cpp
+Copy
+Edit
+http://127.0.0.1:8000
+4. 🌍 Deploy to GitHub Pages
+From the same project folder, run:
+
+bash
+Copy
+Edit
+mkdocs gh-deploy
+This will:
+
+Build the site into /site
+
+Push it to the gh-pages branch
+
+Enable GitHub Pages automatically
+
+🧠 Helpful Linux Tips
+Make sure git is installed:
+
+bash
+Copy
+Edit
+sudo apt install git
+If mkdocs gh-deploy gives GitHub auth issues, try:
+
+bash
+Copy
+Edit
+git config --global credential.helper store
+If you're not using GitHub CLI, make sure your SSH key is added (or use HTTPS with a token).
+
+Would you like me to:
+
+Generate the initial Markdown (functions.md) based on your existing code?
+
+Or give you a custom mkdocs.yml layout based on your folder structure?
+
+Just say the word.
+
+
+
+
+
+
+
+
