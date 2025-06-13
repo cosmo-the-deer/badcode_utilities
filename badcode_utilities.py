@@ -40,4 +40,42 @@ def get_yn_str(text):
     return gput
 
 #======================
-#print(get_yn_str(">"))
+def print_info():
+    print("""
+    #-------------------------------------#
+    made by cosmo-the-deer 2025 mit license
+
+          
+    #------------badcode-help-------------#
+    discord: >insert discord server<
+
+          
+    #----------------socials--------------#
+    discord: cosmothedeer12
+    youtube: @cosmo-the-deer
+    itch.io: cosmothedeer
+    github: cosmo-the-deer
+    gmail: [redacted]
+          
+          
+""")
+    
+#==============================
+info = """
+    #-------------------------------------#
+    made by cosmo-the-deer 2025 mit license
+
+          
+    #------------badcode-help-------------#
+    discord: >insert discord server<
+
+          
+    #----------------socials--------------#
+    discord: cosmothedeer12
+    youtube: @cosmo-the-deer
+    itch.io: cosmothedeer
+    github: cosmo-the-deer
+    gmail: [redacted]
+          
+          
+"""
