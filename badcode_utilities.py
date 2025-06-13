@@ -1,12 +1,6 @@
 #=======================
 # made by cosmo the deer
 
-#=======================
-bad_words = []
-with open("badwords.txt", "r") as file:
-    bad_words = file.read().splitlines()
-for i in range(len(bad_words)):
-    print(bad_words[i])
 
 #============
 import random
@@ -35,6 +29,11 @@ characters_standard = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3
 characters_advanced = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0 ` ~ ! @ # $ % ^ & * ( ) - _ = + [ ] { } \\ | : ; \" \' , < . > / ?".split()
 characters_numbers = "1 2 3 4 5 6 7 8 9 0".split()
 characters_uwu = "owo uwu :3 >:3)"
+
+bad_words = []
+with open("badwords.txt", "r") as file:
+    bad_words = file.read().splitlines()
+
 
 # =========================
 def can_str_be_int(string):
@@ -90,4 +89,8 @@ def generate_key(legnth = 10, characters = characters_standard):
 
 #========
 def is_string_bad(string):
-    pass
+    gput = ""
+    if any(i in string for i in bad_words):
+        return True
+    else:
+        return False
