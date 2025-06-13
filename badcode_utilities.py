@@ -40,4 +40,4 @@ def get_yn_str(text):
     return gput
 
 #======================
-print(get_yn_str(">"))
+#print(get_yn_str(">"))
