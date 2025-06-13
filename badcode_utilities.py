@@ -24,8 +24,10 @@ info = """
           
 """
 
-standard_characters = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0".split()
-advanced_characters = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0 ` ~ ! @ # $ % ^ & * ( ) - _ = + [ ] { } \\ | : ; \" \' , < . > / ?".split()
+characters_standard = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0".split()
+characters_advanced = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0 ` ~ ! @ # $ % ^ & * ( ) - _ = + [ ] { } \\ | : ; \" \' , < . > / ?".split()
+characters_numbers = "1 2 3 4 5 6 7 8 9 0".split()
+characters_uwu = "owo uwu :3 >:3)"
 
 # =========================
 def can_str_be_int(string):
@@ -65,6 +67,7 @@ def get_yn_str(text):
     while gput.lower() != "y" and gput.lower() != "n":
         gput = input(text)
     return gput
+    # i realy want leon from i think i like you
 
 #================
 def print_info():
@@ -88,9 +91,11 @@ def print_info():
 """)
 
 #========
-def generate_key(legnth = 10, characters = standard_characters):
+def generate_key(legnth = 10, characters = characters_standard):
+    # do you realy think keys are secure.
     key = ""
     for i in range(legnth):
         key = key + random.choice(characters)
     return key
-        
+
+#========
