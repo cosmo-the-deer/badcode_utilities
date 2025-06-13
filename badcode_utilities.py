@@ -1,6 +1,33 @@
+#=======================
 # made by cosmo the deer
 
-# ==============================
+#============
+import random
+
+#=========
+info = """
+    #-------------------------------------#
+    made by cosmo-the-deer 2025 mit license
+
+          
+    #------------badcode-help-------------#
+    discord: >insert discord server<
+
+          
+    #----------------socials--------------#
+    discord: cosmothedeer12
+    youtube: @cosmo-the-deer
+    itch.io: cosmothedeer
+    github: cosmo-the-deer
+    gmail: [redacted]
+          
+          
+"""
+
+standard_characters = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0".split()
+advanced_characters = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3 4 5 6 7 8 9 0 ` ~ ! @ # $ % ^ & * ( ) - _ = + [ ] { } \\ | : ; \" \' , < . > / ?".split()
+
+# =========================
 def can_str_be_int(string):
     
     """
@@ -15,7 +42,7 @@ def can_str_be_int(string):
     except ValueError:
         return False
 
-# ==============================
+# =============================
 def str_to_int_or_none(string):
     
     if can_str_be_int(string):
@@ -23,7 +50,7 @@ def str_to_int_or_none(string):
     else:
         return None
 
-# =====================
+# ====================
 def get_yn_bool(text):
 
     gput = ""
@@ -31,7 +58,7 @@ def get_yn_bool(text):
         gput = input(text).lower()
     return True if gput == "y" else False
 
-# =====================
+# ===================
 def get_yn_str(text):
 
     gput = ""
@@ -39,7 +66,7 @@ def get_yn_str(text):
         gput = input(text)
     return gput
 
-#======================
+#================
 def print_info():
     print("""
     #-------------------------------------#
@@ -59,23 +86,11 @@ def print_info():
           
           
 """)
-    
-#==============================
-info = """
-    #-------------------------------------#
-    made by cosmo-the-deer 2025 mit license
 
-          
-    #------------badcode-help-------------#
-    discord: >insert discord server<
-
-          
-    #----------------socials--------------#
-    discord: cosmothedeer12
-    youtube: @cosmo-the-deer
-    itch.io: cosmothedeer
-    github: cosmo-the-deer
-    gmail: [redacted]
-          
-          
-"""
+#========
+def generate_key(legnth = 10, characters = standard_characters):
+    key = ""
+    for i in range(legnth):
+        key = key + random.choice(characters)
+    return key
+        
