@@ -71,24 +71,7 @@ def get_yn_str(text):
 
 #================
 def print_info():
-    print("""
-    #-------------------------------------#
-    made by cosmo-the-deer 2025 mit license
-
-          
-    #------------badcode-help-------------#
-    discord: >insert discord server<
-
-          
-    #----------------socials--------------#
-    discord: cosmothedeer12
-    youtube: @cosmo-the-deer
-    itch.io: cosmothedeer
-    github: cosmo-the-deer
-    gmail: [redacted]
-          
-          
-""")
+    print(info)
 
 #========
 def generate_key(legnth = 10, characters = characters_standard):
