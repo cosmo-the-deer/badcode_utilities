@@ -1,0 +1,9 @@
+
+#--------bad-words.txt--------#
+Modified by cosmo-the-deer, 2025
+Original code by David Sojevic, 2021
+MIT License
+
+#--------badcode-utilities.py--------#
+Made by cosmo-the-deer, 2025
+MIT License
