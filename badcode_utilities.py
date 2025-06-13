@@ -1,6 +1,13 @@
 #=======================
 # made by cosmo the deer
 
+#=======================
+bad_words = []
+with open("badwords.txt", "r") as file:
+    bad_words = file.read().splitlines()
+for i in range(len(bad_words)):
+    print(bad_words[i])
+
 #============
 import random
 
@@ -82,3 +89,5 @@ def generate_key(legnth = 10, characters = characters_standard):
     return key
 
 #========
+def is_string_bad(string):
+    pass
