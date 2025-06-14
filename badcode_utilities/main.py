@@ -106,6 +106,3 @@ def filter_string(string = "", replacement_charator = "", words = bad_words):
         if word:
             filtered = filtered.replace(word, replacement_charator * len(word))
     return filtered
-
-a = filter_string("fuck this shit", "*")
-print(a)
