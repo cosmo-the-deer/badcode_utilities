@@ -1,8 +1,11 @@
-# badcode_utilities
+# Home Page
 
 A small Python utility library by cosmo-the-deer, providing simple helpers for string-to-int conversion, yes/no prompts, and project info display.
 
-- docs: [badcode utilities docs...](https://cosmo-the-deer.github.io/badcode_utilities/)
+## badcode links:
+- Github: [Github repo](https://github.com/cosmo-the-deer/badcode_utilities)
+- Docs: [Docs](https://cosmo-the-deer.github.io/badcode_utilities/)
+- Pypi: [Package](https://pypi.org/project/badcode-utilities/)
 
 ## License
 
