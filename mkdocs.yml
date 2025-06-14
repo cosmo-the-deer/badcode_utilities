@@ -1,5 +1,5 @@
 site_name: badcode_utitiles Docs
-site_url: https://james-willett.github.io/mkdocs-material-youtube-tutorial/
+site_url: https://cosmo-the-deer.github.io/badcode_utilities/
 theme:
   name: material
   language: en
@@ -19,7 +19,7 @@ theme:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
       primary: purple
-      accent: magnta 
+      accent: magenta
     - scheme: slate 
       toggle:
         icon: material/toggle-switch
@@ -40,10 +40,6 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://youtube.com/@cosmo-the-deer
 
-font:
-  text: Roboto
-  code: Roboto Mono
-
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -60,5 +56,3 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-- run: pip install "mkdocs-material[imaging]"
