@@ -1,0 +1,8 @@
+mkdocs-material
+pymdown-extensions
+importlib-resources
+setuptools
+wheel
+twine
+sudo apt install mkdocs
+sudo apt install twine
