@@ -32,11 +32,11 @@ characters_advanced = "a b c d e f g h i j k l m n o p q r s t u v w x y z 1 2 3
 characters_numbers = "1 2 3 4 5 6 7 8 9 0".split()
 characters_uwu = "owo uwu :3 >:3)"
 
-def load_badwords():
+def _load_badwords():
     with importlib.resources.open_text('badcode_utilities', 'badwords.txt') as file:
         return [line.strip() for line in file]
 
-bad_words = load_badwords()
+bad_words = _load_badwords()
 
 
 # =========================
@@ -98,3 +98,14 @@ def is_string_bad(string):
         return True
     else:
         return False
+    
+#======================
+def filter_string(string = "", replacement_charator = "", words = bad_words):
+    filtered = string
+    for word in words:
+        if word:
+            filtered = filtered.replace(word, replacement_charator * len(word))
+    return filtered
+
+a = filter_string("fuck this shit", "*")
+print(a)

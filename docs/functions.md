@@ -132,20 +132,20 @@ is_string_bad("some badword here")  # True (if 'badword' is in badwords.txt)
 
 ---
 
-## load_badwords()
+## filter_string(string, replacement_charator="", words=bad_words)
 **Description:**  
-Loads the list of bad words from the `badwords.txt` file included in the package.
+Replaces each bad word in the string with a replacement character repeated to match the word's length.
 
 **Parameters:**  
-- None
+- `string` (str): The string to filter.
+- `replacement_charator` (str, optional): The character to use for replacement (e.g., '*').
+- `words` (list, optional): List of words to filter (default is `bad_words`).
 
 **Returns:**  
-- `list`: List of bad words.
+- `str`: The filtered string with bad words replaced.
 
 **Example:**
 ```python
-badwords = load_badwords()
-print(badwords)  # ['badword1', 'badword2', ...]
+filter_string("this is shit", "*")  # 'this is ****'
+filter_string("badword here", "#")   # '####### here' (if 'badword' is in bad_words)
 ```
-
----
