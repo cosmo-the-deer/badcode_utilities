@@ -104,5 +104,12 @@ def filter_string(string = "", replacement_charator = "", words = bad_words):
     filtered = string
     for word in words:
         if word:
-            filtered = filtered.replace(word, replacement_charator * len(word))
+            start = 0
+            lw = word.lower()
+            while True:
+                idx = filtered.lower().find(lw, start)
+                if idx == -1:
+                    break
+                filtered = filtered[:idx] + (replacement_charator * len(word)) + filtered[idx+len(word):]
+                start = idx + len(word)
     return filtered
