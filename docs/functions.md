@@ -10,6 +10,12 @@ Checks if the given string can be converted to an integer.
 **Returns:**  
 - `True` if the string can be converted to an integer, otherwise `False`.
 
+**Example:**
+```python
+can_str_be_int("123")    # True
+can_str_be_int("abc")    # False
+```
+
 ---
 
 ## str_to_int_or_none(string)
@@ -21,6 +27,12 @@ Converts the given string to an integer if possible, otherwise returns `None`.
 
 **Returns:**  
 - `int` if conversion is possible, otherwise `None`.
+
+**Example:**
+```python
+str_to_int_or_none("42")     # 42
+str_to_int_or_none("hello")  # None
+```
 
 ---
 
@@ -34,6 +46,13 @@ Prompts the user for a yes/no input (`y` or `n`). Returns `True` for yes, `False
 **Returns:**  
 - `True` if user inputs `y`, `False` if user inputs `n`.
 
+**Example:**
+```python
+answer = get_yn_bool("Continue? (y/n): ")
+# User enters 'y' -> answer is True
+# User enters 'n' -> answer is False
+```
+
 ---
 
 ## get_yn_str(text)
@@ -46,6 +65,13 @@ Prompts the user for a yes/no input (`y` or `n`). Returns the string entered.
 **Returns:**  
 - `'y'` or `'n'` as entered by the user.
 
+**Example:**
+```python
+answer = get_yn_str("Continue? (y/n): ")
+# User enters 'y' -> answer is 'y'
+# User enters 'n' -> answer is 'n'
+```
+
 ---
 
 ## print_info()
@@ -57,6 +83,15 @@ Prints project and contact information to the console.
 
 **Returns:**  
 - None
+
+**Example:**
+```python
+print_info()
+# Output:
+#     #-------------------------------------#
+#     made by cosmo-the-deer 2025 mit license
+#     ...
+```
 
 ---
 
@@ -71,6 +106,12 @@ Generates a random key of specified length using the provided set of characters.
 **Returns:**  
 - `str`: The generated key.
 
+**Example:**
+```python
+generate_key()           # e.g., 'a8F3kLm2Qz'
+generate_key(5)          # e.g., 'X9p2B'
+```
+
 ---
 
 ## is_string_bad(string)
@@ -83,6 +124,12 @@ Checks if the given string contains any words from the bad words list.
 **Returns:**  
 - `True` if any bad word is found, otherwise `False`.
 
+**Example:**
+```python
+is_string_bad("hello world")        # False
+is_string_bad("some badword here")  # True (if 'badword' is in badwords.txt)
+```
+
 ---
 
 ## load_badwords()
@@ -94,5 +141,11 @@ Loads the list of bad words from the `badwords.txt` file included in the package
 
 **Returns:**  
 - `list`: List of bad words.
+
+**Example:**
+```python
+badwords = load_badwords()
+print(badwords)  # ['badword1', 'badword2', ...]
+```
 
 ---
