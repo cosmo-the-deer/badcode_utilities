@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name='badcode_utilities',
-    version='0.3',  # or higher, must be unique and not used before
+    version='0.4',  # or higher, must be unique and not used before
     packages=find_packages(),
     include_package_data=True,
     package_data={
