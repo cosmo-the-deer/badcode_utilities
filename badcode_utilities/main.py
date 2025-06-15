@@ -113,3 +113,6 @@ def filter_string(string = "", replacement_charator = "", words = bad_words):
                 filtered = filtered[:idx] + (replacement_charator * len(word)) + filtered[idx+len(word):]
                 start = idx + len(word)
     return filtered
+
+def is_string_within(string,range_):
+    return len(string) in range_
