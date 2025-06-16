@@ -116,3 +116,9 @@ def filter_string(string = "", replacement_charator = "", words = bad_words):
 
 def is_string_within(string,range_):
     return len(string) in range_
+
+#=======================
+def is_int_in_range(int, range):
+    return int in range
+
+print(is_int_in_range(5, range(1, 4)))
